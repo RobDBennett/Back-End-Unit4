@@ -1,4 +1,4 @@
-# <center>Back end unit 4 Saltiest Hacker News Trolls Backend</center>
+# <center>Saltiest Hacker News Trolls Backend Unit 4</center>
 README will be updated occasionally
 
 Deployed heroku backend: COMING SOON
