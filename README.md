@@ -12,6 +12,18 @@ Build an app that uses Hacker News comment data to rank commenters based on comm
 App rates and ranks hacker news commenters by negativity of comment sentiment (limited to commenters who have made x number of posts). Allows users to search by username to view comments and sentiment levels of specific users.
 
 
+
+## All paths
+
+URL/api/auth/register = POST
+URL/api/auth/login = POST
+URL/api/users = GET
+URL/api/users/:id = PUT, DEL
+URL/api/save = GET
+URL/api/save/:id = PUT, DEL
+URL/api/dash/:id = GET
+
+
 ##### Example of correct Authorization header:
 ```
 Authorization: 'Bearer token'
