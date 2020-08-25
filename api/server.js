@@ -8,6 +8,7 @@ const authRouter = require('../auth/authRouter.js');
 const userRouter = require('../users/userRouter.js');
 // const dataRouter = require();
 const saveRouter = require('../comments/saveRouter.js');
+const getbyRouter = require('../comments/getbyRouter.js');
 
 const authenticate = require('../auth/authenticate.js');
 
@@ -44,6 +45,7 @@ server.use(session(sessionConfig));
 server.use('/api/auth', authRouter);
 server.use('/api/users', authenticate, userRouter);
 server.use('/api/save', authenticate, saveRouter);
+server.use('/api', getbyRouter);
 // server.use('api/data', dataRouter);
 
 server.use('/', (req, res) => {
