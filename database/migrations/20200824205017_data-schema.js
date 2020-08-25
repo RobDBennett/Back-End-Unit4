@@ -7,10 +7,24 @@ exports.up = function(knex) {
         tbl.string('username').unique().notNullable();
         tbl.string('password').notNullable();
     })
+    // .createTable('data', tbl => {
+    //     tbl.increments();
+    //     tbl.string('text');
+    //     tbl.string('author');
+    //     tbl.string('saltiness');
+    // })
+    .createTable('save', tbl => {
+        tbl.increments();
+        tbl.integer('users_id').unsigned().notNullable().references('users.id').onDelete('CASCADE').onUpdate('CASCADE');
+        tbl.string('troll').notNullable();
+        tbl.string('toxicity').notNullable();
+        tbl.string('comment').notNullable();
+    })
 
 };
 
 exports.down = function(knex) {
   return knex.schema
-  .dropTableIfExists('users')
+  .dropTableIfExists('save')
+  .dropTableIfExists('users');
 };

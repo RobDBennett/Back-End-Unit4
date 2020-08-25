@@ -14,7 +14,7 @@ router.get("/", (req, res, next) => {
 
 router.get("/:id", (req, res, next) => {
     const user = req.user;
-    res.status(200).json(auser);
+    res.status(200).json(user);
 });
 
 
