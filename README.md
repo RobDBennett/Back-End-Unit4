@@ -153,18 +153,21 @@ Authorization: 'Bearer token'
 [
     {
         "id": 1,
+        "users_id": 1,
         "troll": "TrollMaster",
         "toxicity": 0.1,
         "comment": "Never gonna give you up, never gonna let you down."
     },
     {
         "id": 4,
+        "users_id": 1,
         "troll": "TrollRollRick",
         "toxicity": 0.5,
         "comment": "Never gonna give you up, never gonna let you down."
     },
     {
        "id": 5,
+       "users_id": 2,
         "troll": "RickRollTroll",
         "toxicity": 0.9,
         "comment": "Never gonna give you up, never gonna let you down."
@@ -186,7 +189,8 @@ Authorization: 'Bearer token'
 {
 	"troll": "XXX",
 	"toxicity": 0.5,
-	"comment": "YYY"
+	"comment": "YYY",
+    "users_id": 1
 }
 ```
 
@@ -195,24 +199,28 @@ Authorization: 'Bearer token'
 [
     {
         "id": 1,
+        "users_id": 1,
         "troll": "TrollMaster",
         "toxicity": 0.1,
         "comment": "Never gonna give you up, never gonna let you down."
     },
     {
         "id": 4,
+        "users_id": 1,
         "troll": "TrollRollRick",
         "toxicity": 0.5,
         "comment": "Never gonna give you up, never gonna let you down."
     },
     {
        "id": 5,
+       "users_id": 1,
         "troll": "RickRollTroll",
         "toxicity": 0.9,
         "comment": "Never gonna give you up, never gonna let you down."
     },
     {
-        "id": 6
+        "id": 6,
+        "users_id": 1,
         "troll": "XXX",
         "toxicity": 0.4,
         "comment": "YYY"
