@@ -140,7 +140,7 @@ Authorization: 'Bearer token'
 ```
 
 
-### /api/comments GET - AUTH REQUIRED
+### /api/save GET - AUTH REQUIRED
 
 #### Expected Headers:
 ```
@@ -153,27 +153,27 @@ Authorization: 'Bearer token'
 [
     {
         "id": 1,
-        "troll_username": "TrollMaster",
-        "comment_toxicity": 0.1,
+        "troll": "TrollMaster",
+        "toxicity": 0.1,
         "comment": "Never gonna give you up, never gonna let you down."
     },
     {
         "id": 4,
-        "troll_username": "TrollRollRick",
-        "comment_toxicity": 0.5,
+        "troll": "TrollRollRick",
+        "toxicity": 0.5,
         "comment": "Never gonna give you up, never gonna let you down."
     },
     {
        "id": 5,
-        "troll_username": "RickRollTroll",
-        "comment_toxicity": 0.9,
+        "troll": "RickRollTroll",
+        "toxicity": 0.9,
         "comment": "Never gonna give you up, never gonna let you down."
     },
 ]
 ```
 
 
-### /api/comments POST - AUTH REQUIRED
+### /api/save POST - AUTH REQUIRED
 
 #### Expected Headers:
 ```
@@ -184,8 +184,8 @@ Authorization: 'Bearer token'
 #### Expected Request Body:
 ```
 {
-	"troll_username": "XXX",
-	"comment_toxicity": 0.5,
+	"troll": "XXX",
+	"toxicity": 0.5,
 	"comment": "YYY"
 }
 ```
@@ -195,33 +195,33 @@ Authorization: 'Bearer token'
 [
     {
         "id": 1,
-        "troll_username": "TrollMaster",
-        "comment_toxicity": 0.1,
+        "troll": "TrollMaster",
+        "toxicity": 0.1,
         "comment": "Never gonna give you up, never gonna let you down."
     },
     {
         "id": 4,
-        "troll_username": "TrollRollRick",
-        "comment_toxicity": 0.5,
+        "troll": "TrollRollRick",
+        "toxicity": 0.5,
         "comment": "Never gonna give you up, never gonna let you down."
     },
     {
        "id": 5,
-        "troll_username": "RickRollTroll",
-        "comment_toxicity": 0.9,
+        "troll": "RickRollTroll",
+        "toxicity": 0.9,
         "comment": "Never gonna give you up, never gonna let you down."
     },
     {
         "id": 6
-        "troll_username": "XXX",
-        "comment_toxicity": 0.4,
+        "troll": "XXX",
+        "toxicity": 0.4,
         "comment": "YYY"
     }
 ]
 ```
 
 
-### /api/comments DELETE - AUTH REQUIRED
+### /api/save/:id DELETE - AUTH REQUIRED
 
 #### Expected Headers:
 ```
@@ -229,33 +229,22 @@ Content-Type: application/json
 Authorization: 'Bearer token'
 ```
 
-#### Expected Request Body:
-```
-{
-	"id": 6
-}
-```
-
 #### Expected Return Data
 ```
 [
     {
-        "id": 1,
-        "troll_username": "TrollMaster",
-        "comment_toxicity": 0.1,
-        "comment": "Never gonna give you up, never gonna let you down."
-    },
-    {
-        "id": 4,
-        "troll_username": "TrollRollRick",
-        "comment_toxicity": 0.5,
-        "comment": "Never gonna give you up, never gonna let you down."
-    },
-    {
-       "id": 5,
-        "troll_username": "RickRollTroll",
-        "comment_toxicity": 0.9,
-        "comment": "Never gonna give you up, never gonna let you down."
+        Row deleted
     }
 ]
 ```
+### /api/dash/:id - AUTH REQUIRED
+
+#### Exprected Headers: 
+```
+Content-Type: application/json
+Authorization: 'Bearer token'
+```
+
+#### Expected Return Data
+
+user's saved comments
