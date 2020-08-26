@@ -7,11 +7,17 @@ exports.up = function(knex) {
         tbl.string('username').unique().notNullable();
         tbl.string('password').notNullable();
     })
+    .createTable('data', tbl => {
+        tbl.increments();
+        tbl.string('text');
+        tbl.string('author');
+        tbl.string('tox');
+    })
     // .createTable('data', tbl => {
     //     tbl.increments();
-    //     tbl.string('text');
-    //     tbl.string('author');
-    //     tbl.string('saltiness');
+    //     tbl.string('name');
+    //     tbl.string('num');
+    //     tbl.string('info01');
     // })
     .createTable('save', tbl => {
         tbl.increments();
@@ -26,5 +32,6 @@ exports.up = function(knex) {
 exports.down = function(knex) {
   return knex.schema
   .dropTableIfExists('save')
+  .dropTableIfExists('data')
   .dropTableIfExists('users');
 };

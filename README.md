@@ -1,7 +1,7 @@
 # <center>Saltiest Hacker News Trolls Backend Unit 4</center>
 README will be updated occasionally
 
-Deployed heroku backend: COMING SOON
+Deployed heroku backend: https://salty-hacker-1-bw.herokuapp.com/
 
 #### Description
 
@@ -21,7 +21,7 @@ URL/api/users = GET
 URL/api/users/:id = PUT, DEL
 URL/api/save = GET
 URL/api/save/:id = PUT, DEL
-URL/api/dash/:id = GET
+URL/api/dash/ = GET
 
 
 ##### Example of correct Authorization header:

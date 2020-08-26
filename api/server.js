@@ -6,7 +6,7 @@ const knexSessionStore = require('connect-session-knex')(session);
 
 const authRouter = require('../auth/authRouter.js');
 const userRouter = require('../users/userRouter.js');
-// const dataRouter = require();
+const dataRouter = require('../comments/dataRouter.js');
 const saveRouter = require('../comments/saveRouter.js');
 const getbyRouter = require('../comments/getbyRouter.js');
 
@@ -46,7 +46,7 @@ server.use('/api/auth', authRouter);
 server.use('/api/users', authenticate, userRouter);
 server.use('/api/save', authenticate, saveRouter);
 server.use('/api', getbyRouter);
-// server.use('api/data', dataRouter);
+server.use('/api/data', dataRouter);
 
 server.use('/', (req, res) => {
     res.send(`
