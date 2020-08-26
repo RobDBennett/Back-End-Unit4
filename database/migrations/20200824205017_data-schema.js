@@ -9,9 +9,9 @@ exports.up = function(knex) {
     })
     .createTable('data', tbl => {
         tbl.increments();
-        tbl.string('text');
-        tbl.string('author');
-        tbl.string('tox');
+        tbl.varchar('text', 128);
+        tbl.varchar('author', 128);
+        tbl.float('tox', 2);
     })
     // .createTable('data', tbl => {
     //     tbl.increments();
