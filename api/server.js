@@ -43,8 +43,8 @@ server.use(express.json());
 server.use(session(sessionConfig));
 
 server.use('/api/auth', authRouter);
-server.use('/api/users', authenticate, userRouter);
-server.use('/api/save', authenticate, saveRouter);
+server.use('/api/users', userRouter);
+server.use('/api/save', saveRouter);
 server.use('/api', getbyRouter);
 server.use('/api/data', dataRouter);
 
