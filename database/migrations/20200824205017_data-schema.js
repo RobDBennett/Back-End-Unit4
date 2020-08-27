@@ -13,6 +13,12 @@ exports.up = function(knex) {
         tbl.varchar('author', 128);
         tbl.float('tox', 2);
     })
+    .createTable('feed', tbl => {
+        tbl.increments();
+        tbl.text('text');
+        tbl.varchar('author', 128);
+        tbl.float('tox', 2);
+    })
     // .createTable('data', tbl => {
     //     tbl.increments();
     //     tbl.string('name');
@@ -32,6 +38,6 @@ exports.up = function(knex) {
 exports.down = function(knex) {
   return knex.schema
   .dropTableIfExists('save')
-  .dropTableIfExists('data')
+  .dropTableIfExists('feed')
   .dropTableIfExists('users');
 };
