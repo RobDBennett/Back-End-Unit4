@@ -38,4 +38,11 @@ router.get('/', (req, res) => {
         });
 });
 
+// router.get('/', (req, res) => {
+//     db.select('*')
+//         .from('data')
+//         .then(save => res.status(200).json({data: data}))
+//         .catch((err) => console.log(err));
+// });
+
 module.exports = router;
