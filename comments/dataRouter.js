@@ -27,7 +27,7 @@ router.get('/', (req, res) => {
                 }
             })
 
-            feed.splice(1000, feed.length - 1000);
+            feed.splice(400, feed.length - 400);
             const newFeed = await db.batchInsert("data", feed)
                 .then(() => db("data"));
             res.status(201).json(newFeed)
