@@ -9,7 +9,7 @@ exports.up = function(knex) {
     })
     .createTable('data', tbl => {
         tbl.increments();
-        tbl.varchar('text', 128);
+        tbl.text('text', 128);
         tbl.varchar('author', 128);
         tbl.float('tox', 2);
     })
